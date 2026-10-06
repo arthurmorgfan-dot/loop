@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { View } from "@/types/loop";
 import { mockUser } from "@/data/mock-user";
 import { prototypeNotice } from "@/lib/constants";
@@ -80,6 +81,11 @@ export function AppShell({
           <button className="text-button demo-reset" onClick={onReset}>
             Demo opnieuw starten <Icon name="return" />
           </button>
+          <div>
+            <Link href="/" className="text-button demo-reset">
+              Terug naar loop. <Icon name="arrow" />
+            </Link>
+          </div>
         </div>
       </footer>
       {nav(true)}

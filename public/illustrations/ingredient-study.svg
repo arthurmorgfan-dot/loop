@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" fill="none">
+<!-- Ordinary foods, using the soft flat shapes and palette of the existing LOOP crate. -->
+<ellipse cx="465" cy="307" rx="389" ry="14" fill="#e4e8d9"/>
+<!-- whole grain bread -->
+<path d="M103 209c-15-58 22-109 75-109 56 0 95 49 76 110Z" fill="#bf9461"/>
+<path d="M111 202c-7-47 25-84 67-84 44 0 78 37 69 84Z" fill="#d6b483"/>
+<path d="m140 156 19 38m18-58 16 54m16-41 13 38" stroke="#a47b4e" stroke-width="5" stroke-linecap="round"/>
+<g fill="#e7ceb0"><ellipse cx="132" cy="174" rx="3" ry="5" transform="rotate(-25 132 174)"/><ellipse cx="175" cy="153" rx="3" ry="5" transform="rotate(35 175 153)"/><ellipse cx="203" cy="183" rx="3" ry="5" transform="rotate(-20 203 183)"/></g>
+<!-- oats in a low ceramic bowl -->
+<path d="M56 232c9 42 26 57 64 57s54-15 64-57Z" fill="#d9dac7"/>
+<ellipse cx="120" cy="232" rx="64" ry="18" fill="#efebd9"/>
+<ellipse cx="120" cy="232" rx="54" ry="13" fill="#c6b68b"/>
+<g fill="#e5d8ae"><ellipse cx="84" cy="230" rx="6" ry="3" transform="rotate(-20 84 230)"/><ellipse cx="103" cy="237" rx="6" ry="3" transform="rotate(20 103 237)"/><ellipse cx="122" cy="228" rx="6" ry="3" transform="rotate(-20 122 228)"/><ellipse cx="144" cy="237" rx="6" ry="3"/><ellipse cx="154" cy="226" rx="6" ry="3"/><ellipse cx="121" cy="241" rx="6" ry="3"/><ellipse cx="101" cy="224" rx="6" ry="3"/></g>
+<!-- potato -->
+<path d="M235 248c-15-21-7-44 16-48 21-4 25-21 47-9 25 13 16 46-7 61-23 14-44 14-56-4Z" fill="#cbb780"/>
+<g fill="#a89869"><circle cx="252" cy="218" r="2"/><circle cx="277" cy="238" r="2"/><circle cx="293" cy="212" r="2"/></g>
+<!-- lentils in a ceramic bowl -->
+<path d="M301 254c6 32 25 53 66 53s58-21 65-53Z" fill="#c6d2b4"/>
+<ellipse cx="367" cy="254" rx="66" ry="20" fill="#e5e9d8"/>
+<ellipse cx="367" cy="253" rx="55" ry="14" fill="#a77e50"/>
+<g fill="#bf9b6a"><ellipse cx="331" cy="252" rx="5" ry="3"/><ellipse cx="343" cy="246" rx="5" ry="3"/><ellipse cx="350" cy="258" rx="5" ry="3"/><ellipse cx="363" cy="249" rx="5" ry="3"/><ellipse cx="372" cy="260" rx="5" ry="3"/><ellipse cx="386" cy="250" rx="5" ry="3"/><ellipse cx="401" cy="254" rx="5" ry="3"/></g>
+<!-- fresh greens -->
+<path d="M423 263c-41-36-59-76-38-91 15-11 41 22 49 53-11-64-4-113 20-112 28 1 20 63 7 110 26-59 52-71 64-53 15 24-29 80-48 101Z" fill="#819b68"/>
+<path d="m443 273 13-135m-14 94-44-43m56 53 46-50" stroke="#b7c899" stroke-width="3" stroke-linecap="round"/>
+<!-- carrots -->
+<path d="M517 285c-5-43-16-110 9-113 25-2 15 80-9 113Z" fill="#d69a57"/>
+<path d="m526 174-13-24m14 23 8-30m-9 26 24-15" stroke="#718a53" stroke-width="5" stroke-linecap="round"/>
+<path d="m519 202 13-1m-15 19 13-1" stroke="#bd8145" stroke-width="2"/>
+<!-- apple and orange -->
+<path d="M565 232c-25-17-48 1-41 30 7 28 24 26 40 21 18 7 36 7 42-20 7-29-18-48-41-31Z" fill="#b9bc72"/>
+<path d="m565 232 3-17" stroke="#706749" stroke-width="4" stroke-linecap="round"/>
+<path d="M568 222c-1-17 16-16 21-11-2 10-11 12-21 11Z" fill="#6d8654"/>
+<circle cx="645" cy="264" r="35" fill="#d9ab62"/>
+<path d="m644 230 3-5" stroke="#899458" stroke-width="3"/>
+<!-- soy drink concept carton, no nutrition information -->
+<path d="m719 139 42-33 43 16-45 32Z" fill="#e8ddbe"/>
+<path d="m719 139 40 15-1 136-40-16Z" fill="#d8ccaa"/>
+<path d="m759 154 45-32-1 151-45 17Z" fill="#f0e8d1"/>
+<path d="m750 114 12-10 15 5-13 11Z" fill="#ede7d6"/>
+<path d="M773 235c-9-13-4-30 17-30 2 19-3 30-17 30Z" fill="#98aa7d"/>
+<!-- a few nuts and grains -->
+<path d="M685 291c-13-18 1-32 14-23 15 10 1 30-14 23Z" fill="#ab8b5e"/>
+<path d="m687 287 9-15" stroke="#d1b486" stroke-width="2"/>
+<path d="M828 277c-9-15 3-26 14-18 11 9 0 23-14 18Z" fill="#ab8b5e"/>
+<g fill="#d6ccb0"><ellipse cx="829" cy="290" rx="6" ry="3" transform="rotate(-25 829 290)"/><ellipse cx="849" cy="286" rx="6" ry="3" transform="rotate(15 849 286)"/><ellipse cx="839" cy="299" rx="6" ry="3" transform="rotate(35 839 299)"/></g>
+</svg>

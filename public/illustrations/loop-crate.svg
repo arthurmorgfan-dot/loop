@@ -1,0 +1,140 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="620"
+  height="410"
+  viewBox="0 0 620 410"
+>
+  <defs>
+    <linearGradient id="front" x2="0" y2="1">
+      <stop stop-color="#577159" />
+      <stop offset="1" stop-color="#3e5948" />
+    </linearGradient>
+    <linearGradient id="side" x2="1" y2="1">
+      <stop stop-color="#385740" />
+      <stop offset="1" stop-color="#2f4c3a" />
+    </linearGradient>
+    <linearGradient id="carrot" x2="1" y2="1">
+      <stop stop-color="#ecaa5c" />
+      <stop offset="1" stop-color="#c77c3f" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="311" cy="356" rx="214" ry="18" fill="#d6dfc8" />
+  <path d="m114 215 264-43 137 45-264 52Z" fill="#2e4836" />
+  <!-- Oats and lentils in simple paper packs -->
+  <path d="m285 75 69-4 9 153-72 12Z" fill="#e9d8b3" />
+  <path d="m354 71 13 9 10 137-14 7Z" fill="#cab88c" />
+  <path d="m301 103 43-2m-43 8 43-2" stroke="#c2b28d" stroke-width="2" />
+  <rect
+    x="303"
+    y="134"
+    width="40"
+    height="46"
+    rx="3"
+    fill="#f5eddb"
+    transform="rotate(-3 303 134)"
+  />
+  <path
+    d="m322 167-1-25m0 9c-7 0-7-6-7-6s7 0 7 6Zm0 8c7 0 7-6 7-6s-7 0-7 6Z"
+    fill="none"
+    stroke="#879066"
+    stroke-width="2"
+  />
+  <path d="m371 121 63 8-11 113-62-8Z" fill="#e2d0a8" />
+  <path d="m434 129 12 7-10 99-13 7Z" fill="#c4ad82" />
+  <path d="m380 154 42 5-4 39-43-5Z" fill="#f5ebd8" />
+  <g fill="#b57450">
+    <ellipse cx="386" cy="169" rx="4" ry="5" transform="rotate(30 386 169)" />
+    <ellipse cx="399" cy="175" rx="4" ry="5" transform="rotate(30 399 175)" />
+    <ellipse cx="411" cy="168" rx="4" ry="5" transform="rotate(30 411 168)" />
+    <ellipse cx="406" cy="185" rx="4" ry="5" transform="rotate(30 406 185)" />
+  </g>
+  <!-- Greens -->
+  <path
+    d="M179 227c-28-39-69-74-50-95 15-16 45 10 58 42-12-45-16-90 7-97 31-9 29 59 29 88 12-44 31-63 48-53 22 14-7 66-23 90l-13 45Z"
+    fill="#789460"
+  />
+  <path
+    d="M189 223c-37-32-49-54-32-64 19-11 43 13 51 33-2-27 7-50 25-47 19 3 18 32 9 67Z"
+    fill="#91a974"
+  />
+  <path
+    d="m205 234-10-122m7 87-48-51m54 52 35-60"
+    fill="none"
+    stroke="#b5c795"
+    stroke-width="3"
+  />
+  <path d="m215 226 27-77" fill="none" stroke="#bdcd9b" stroke-width="3" />
+  <!-- Broccoli -->
+  <path d="m246 235 3-55 21-5 15 66" fill="#96ac71" />
+  <g fill="#496f45">
+    <circle cx="250" cy="159" r="27" />
+    <circle cx="282" cy="158" r="26" />
+    <circle cx="263" cy="135" r="26" />
+    <circle cx="225" cy="154" r="20" />
+  </g>
+  <g fill="#638751">
+    <circle cx="249" cy="143" r="12" />
+    <circle cx="273" cy="128" r="13" />
+    <circle cx="285" cy="155" r="12" />
+    <circle cx="228" cy="150" r="11" />
+  </g>
+  <!-- Carrots -->
+  <path d="M431 233c7-42 13-93 31-82s-9 61-31 82Z" fill="url(#carrot)" />
+  <path
+    d="M465 158c-4-17 7-31 7-31m-9 28c-13-16-12-25-12-25m12 24c15-13 25-12 25-12"
+    fill="none"
+    stroke="#748c50"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+  <path d="m447 188 9 4m-13 7 9 4" stroke="#b7783e" stroke-width="2" />
+  <!-- Apples and courgette -->
+  <path
+    d="M174 198c-21-17-47 4-36 30 10 22 27 17 34 14 13 5 28 7 35-13 9-26-14-46-33-31Z"
+    fill="#b9bb69"
+  />
+  <path
+    d="m173 201 2-17"
+    stroke="#71684a"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+  <path d="M176 188c-2-14 12-16 19-12-1 9-9 14-19 12Z" fill="#647f4e" />
+  <path
+    d="M366 209c4-36 50-38 50-7 0 12-13 28-27 32-14 4-27-5-23-25Z"
+    fill="#d1ac5d"
+  />
+  <path d="m390 184 5-10" stroke="#78653d" stroke-width="3" />
+  <path d="m292 230 64-81c13-17 34-1 22 17l-56 85Z" fill="#66804f" />
+  <path d="m305 232 63-77" stroke="#88a068" stroke-width="3" />
+  <!-- Reusable crate -->
+  <path d="m114 215 137 43 264-41-27 108-244 43-103-48Z" fill="url(#front)" />
+  <path d="m114 215 137 43-7 110-103-48Z" fill="url(#side)" />
+  <path d="m114 215 137 43 264-41-3 16-261 43-135-45Z" fill="#6a8163" />
+  <path d="m251 276 261-43-4 15-259 43Z" fill="#3a563f" />
+  <path
+    d="m153 247 14 5 11 77-14-6Zm37 12 14 4 5 80-14-7Zm36 13 14 4-3 80-13-5Z"
+    fill="#284831"
+  />
+  <g stroke="#284733" stroke-width="8" stroke-linecap="round">
+    <path
+      d="m276 299 45-7m-47 27 46-8m-47 27 46-8m117-56 43-7m-46 27 43-7m-46 27 43-7"
+    />
+  </g>
+  <path d="m330 281 91-15-3 69-91 17Z" fill="#49644d" />
+  <text
+    x="372"
+    y="317"
+    text-anchor="middle"
+    fill="#e4e9d9"
+    font-family="Arial,Helvetica,sans-serif"
+    font-weight="700"
+    font-size="29"
+    letter-spacing="-2"
+    transform="rotate(-9 372 310)"
+  >
+    loop.
+  </text>
+  <path d="m142 319 102 49 244-43 3-13-245 42-104-48Z" fill="#314e39" />
+  <path d="m307 263 134-22-2 9-134 23Z" fill="#263f2c" />
+</svg>

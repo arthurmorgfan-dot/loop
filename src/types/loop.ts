@@ -1,3 +1,4 @@
+import type { Weekday } from "@/i18n/locale";
 export type ProviderId = "markt-noord" | "vers-dichtbij" | "buurtmarkt";
 export type Fulfilment = "delivery" | "pickup";
 export type PointId = "demo-noord" | "demo-zuid";
@@ -37,31 +38,36 @@ export type IngredientId =
   | "buckwheat-flakes";
 export interface DemoIngredient {
   id: IngredientId;
-  name: string;
 }
+export type CategoryId =
+  | "grains"
+  | "potatoes"
+  | "legumes"
+  | "vegetables"
+  | "fruit"
+  | "nuts-seeds"
+  | "plant-staples";
 export interface CrateItem {
   id: CrateItemId;
-  category: string;
+  category: CategoryId;
   symbol: FoodSymbol;
   alternatives: IngredientId[];
 }
 export interface ItemChoice {
   ingredient: IngredientId;
-  amount: "standard" | "less";
+  amount: "standard" | "less" | "more";
 }
 export interface DemoProvider {
   id: ProviderId;
   name: string;
-  description: string;
 }
 export interface DemoPoint {
   id: PointId;
   name: string;
-  description: string;
 }
 export interface DemoSlot {
   id: SlotId;
-  day: string;
+  day: Weekday;
   time: string;
 }
 export interface WeekPreferences {
@@ -75,11 +81,12 @@ export interface WeekPreferences {
 }
 export interface DemoHistoryWeek {
   id: string;
-  label: string;
-  period: string;
+  week: number;
+  start: string;
+  end: string;
   fulfilment: Fulfilment;
   point?: PointId;
-  day: string;
+  day: Weekday;
   time: string;
   items: Record<CrateItemId, ItemChoice>;
 }

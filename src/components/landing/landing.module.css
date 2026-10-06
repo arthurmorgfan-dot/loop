@@ -670,3 +670,29 @@
     scroll-behavior: auto !important;
   }
 }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: var(--background);
+}
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.shortDemoLabel {
+  display: none;
+}
+@media (max-width: 599px) {
+  .fullDemoLabel {
+    display: none;
+  }
+  .shortDemoLabel {
+    display: inline;
+  }
+  .headerCta :global(.icon) {
+    display: none;
+  }
+}

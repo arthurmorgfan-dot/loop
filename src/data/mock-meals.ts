@@ -1,16 +1,20 @@
+import type { mealKeys } from "@/i18n/data";
 import type { IngredientId } from "@/types/loop";
-export const mockMeals: { name: string; groups: IngredientId[][] }[] = [
+export const mockMeals: {
+  id: keyof typeof mealKeys;
+  groups: IngredientId[][];
+}[] = [
   {
-    name: "Linzensoep",
+    id: "lentil-soup",
     groups: [["red-lentils", "green-lentils"], ["carrots"]],
   },
   {
-    name: "Rijst met linzen en spinazie",
+    id: "rice-lentils-spinach",
     groups: [["brown-rice"], ["red-lentils", "green-lentils"], ["spinach"]],
   },
-  { name: "Aardappel-spinazie stamppot", groups: [["potatoes"], ["spinach"]] },
+  { id: "potato-spinach-mash", groups: [["potatoes"], ["spinach"]] },
   {
-    name: "Havermout met fruit",
+    id: "oats-fruit",
     groups: [["oats"], ["apples", "orange", "pear"]],
   },
 ];

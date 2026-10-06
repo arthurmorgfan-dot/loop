@@ -1,0 +1,611 @@
+export const nl = {
+  skip_to_content: "Naar de inhoud",
+  main_navigation: "Hoofdnavigatie",
+  mobile_navigation: "Mobiele hoofdnavigatie",
+  footer_navigation: "Footernavigatie",
+  loop_this_week: "LOOP — deze week",
+  demo_account_about_this_prototype: "Demo-account — over dit prototype",
+  demo_account: "Demo-account",
+  this_week: "Deze week",
+  my_crate: "Mijn krat",
+  delivery: "Bezorging",
+  previous_weeks: "Vorige weken",
+  previous: "Eerder",
+  prototype_v0_1: "Prototype v0.1",
+  restart_demo: "Demo opnieuw starten",
+  back_to_loop: "Terug naar loop.",
+  loop_is_currently_a_prototype_providers_delivery_and_public_fu:
+    "LOOP is momenteel een prototype. Aanbieders, bezorging en publieke vergoeding in deze demo zijn niet actief.",
+  good_morning: "Goedemorgen.",
+  your_loop_for_this_week_is_ready: "Je LOOP voor deze week is klaar.",
+  the_basics_are_handled_the_day_is_yours:
+    "De basis is geregeld. De dag is van jou.",
+  the_previous_rounds: "De vorige rondes.",
+  your_crate_your_choices: "Jouw krat. Jouw keuzes.",
+  at_a_time_that_suits_you: "Op jouw moment.",
+  the_basics_are_ready_choose_what_works_for_you:
+    "De basis staat klaar. Kies wat bij je past.",
+  choose_a_demo_provider_and_a_time_that_suits_you:
+    "Kies een demo-aanbieder en een moment dat je uitkomt.",
+  your_previous_crates_all_in_one_place_demo:
+    "Je eerdere kratten, rustig op een rij. · Demo",
+  previous_crate: "Vorige krat",
+  collected_with_your_next_delivery:
+    "Wordt meegenomen bij je volgende bezorging.",
+  bring_your_empty_crate_when_you_collect_the_next_one:
+    "Neem je lege krat mee als je de volgende ophaalt.",
+  a_small_effort_another_round_demo:
+    "Een kleine moeite. Een nieuwe ronde. · Demo",
+  your_week_at_a_glance: "Je week in het kort",
+  pickup: "Ophalen",
+  at_your_door_in_this_demo: "Aan je deur, in deze demo.",
+  change_time_or_collection_method: "Moment of ontvangst wijzigen",
+  demo_providers: "DEMO-AANBIEDERS",
+  prepares_your_demo_crate: "Stelt je demo-krat samen",
+  choose_a_provider: "Aanbieder kiezen",
+  choose_provider_and_collection_method: "Aanbieder en ontvangst kiezen",
+  confirm_your_demo_week: "Je demo-week bevestigen",
+  all_as_you_like_it: "Alles naar wens?",
+  your_choices_are_ready_confirm_and_get_on_with_your_day:
+    "Je keuzes staan klaar. Bevestig en laat het los.",
+  confirm_my_week: "Bevestig mijn week",
+  a_confirmation_in_this_demo_only: "Alleen een bevestiging in deze demo",
+  your_confirmed_demo_week: "Je bevestigde demo-week",
+  your_loop_has_been_updated: "Je LOOP is aangepast.",
+  edit_my_crate: "Mijn krat aanpassen",
+  back_to_this_week: "Terug naar deze week",
+  basics_you_can_rely_on_room_to_live:
+    "Een basis om op te vertrouwen. Ruimte om te leven.",
+  your_delivery_choice_has_been_updated_in_the_demo_confirm_your:
+    "Je ontvangstkeuze is aangepast in de demo. Bevestig je week wanneer alles naar wens is.",
+  your_loop_has_been_updated_your_choices_are_confirmed_in_the_d:
+    "Je LOOP is aangepast. Je keuzes zijn bevestigd in de demo.",
+  the_demo_has_restarted_all_choices_have_been_reset:
+    "De demo is opnieuw gestart. Alle keuzes zijn teruggezet.",
+  loop_crate: "LOOP KRAT",
+  illustration_of_a_reusable_loop_crate_with_vegetables_fruit_an:
+    "Illustratie van een herbruikbare LOOP krat met groente, fruit en basisproducten",
+  thoughtfully_filled: "Goed gevuld. Met aandacht.",
+  a_good_foundation_for: "Een goede basis voor",
+  your_whole_week: "jouw hele week.",
+  a_nourishing_foundation: "Voedzame basis",
+  room_for_your_choices: "Ruimte voor jouw keuzes",
+  ready_to_confirm: "Klaar om te bevestigen",
+  changes_to_your_crate: "Aanpassingen in je krat",
+  view_my_crate: "Bekijk mijn krat",
+  swap_products: "Wissel producten",
+  for_1_person: "Voor 1 persoon",
+  what_s_in_your_crate: "Dit zit in je krat",
+  the_basics_for_this_week: "De basis voor deze week.",
+  demo_candidate_020: "DEMO · Candidate 020",
+  the_contents_and_weekly_quantities_come_from_candidate_020_mod:
+    "De inhoud en wekelijkse hoeveelheden komen uit Candidate 020-modeldata voor één persoon. Ze zijn niet gemeten en de voedingskundige geschiktheid is niet gevalideerd. Dit is geen definitieve commerciële LOOP-krat. Minder, meer en vervangingen zijn productinteracties in de demo, niet voedingskundig geoptimaliseerd of beoordeeld op gelijkwaardigheid.",
+  use_what_you_have: "Gebruik wat je hebt",
+  a_few_ideas_for_your_week: "Een paar ideeën voor je week",
+  demo_meal_ideas_using_ingredients_in_your_current_crate_not_co:
+    "Demo-maaltijdideeën met ingrediënten uit jouw huidige krat. Geen complete recepten of gevalideerd voedingsplan.",
+  there_are_no_demo_ideas_for_this_combination_yet_your_crate_is:
+    "Voor deze combinatie zijn er nog geen demo-ideeën. Je krat blijft helemaal jouw keuze.",
+  continue_to_delivery: "Verder naar bezorging",
+  standard: "Standaard",
+  less: "Minder",
+  more: "Meer",
+  replace: "Vervangen",
+  demo_choices_not_assessed_for_nutritional_equivalence:
+    "Demo-keuzes, niet beoordeeld op voedingskundige gelijkwaardigheid.",
+  demo_quantity_for_this_week_less_and_more_are_example_settings:
+    "Demo-hoeveelheid voor deze week. Minder en meer zijn voorbeeldstanden, geen voedingsadvies.",
+  this_replacement_uses_the_original_crate_item_s_quantity_for_t:
+    "De vervanging gebruikt de hoeveelheid van dit kratonderdeel als demo; geen gelijkwaardige voedingswaarde.",
+  undo: "Herstel",
+  how_would_you_like_to_receive_your_crate: "Hoe ontvang je je krat?",
+  home_delivery: "Thuisbezorgd",
+  loop_point: "LOOP Point",
+  demo_loop_points: "Demo LOOP Points",
+  fictional_locations_with_no_real_addresses_or_partners_nothing:
+    "Fictieve locaties, zonder echte adressen of partners. Hier kun je niets ophalen.",
+  delivery_time: "Bezorgmoment",
+  pickup_time: "Ophaalmoment",
+  your_choice_is_saved_in_this_demo_only_nothing_is_booked:
+    "Je keuze wordt alleen in deze demo bewaard. Er wordt niets geboekt.",
+  demo_providers_alt: "Demo-aanbieders",
+  in_a_future_loop_service_participating_providers_could_prepare:
+    "In een toekomstige LOOP-dienst zouden deelnemende aanbieders je weekkrat kunnen samenstellen via bestaande voedsel- en bezorgnetwerken.",
+  a_familiar_neighbourhood_shop: "Een vertrouwde buurtwinkel",
+  fresh_food_thoughtfully_put_together: "Vers, met aandacht samengesteld",
+  the_basics_close_to_home: "De basis, dichtbij huis",
+  loop_point_demo_north: "LOOP Point Demo Noord",
+  loop_point_demo_south: "LOOP Point Demo Zuid",
+  fictional_pickup_location_not_an_active_point:
+    "Fictieve afhaallocatie · geen actief punt",
+  fictional_location: "Fictieve locatie",
+  previous_demo_crates: "Eerdere demo-kratten",
+  fictional_demo_weeks_no_deliveries_pickups_or_purchases_have_t:
+    "Fictieve demo-weken. Er hebben geen bezorgingen, afhalingen of aankopen plaatsgevonden.",
+  in_this_demo_crate: "In dit demo-krat",
+  changes_in_this_demo_week: "Aanpassingen in deze demo-week",
+  no_changes_in_this_example: "Geen aanpassingen in dit voorbeeld.",
+  go_to_this_week: "Naar deze week",
+  lentil_soup: "Linzensoep",
+  rice_with_lentils_and_spinach: "Rijst met linzen en spinazie",
+  mashed_potatoes_with_spinach: "Aardappel-spinazie stamppot",
+  oats_with_fruit: "Havermout met fruit",
+  oats: "Havermout",
+  whole_grain_bread: "Volkorenbrood",
+  potatoes: "Aardappelen",
+  green_lentils: "Groene linzen",
+  red_lentils: "Rode linzen",
+  carrots: "Wortels",
+  spinach: "Spinazie",
+  apples: "Appels",
+  orange: "Sinaasappel",
+  mixed_nuts: "Gemengde noten",
+  rapeseed_oil: "Koolzaadolie",
+  brown_rice: "Zilvervliesrijst",
+  fortified_soy_drink: "Verrijkte sojadrink",
+  pear: "Peer",
+  chickpeas: "Kikkererwten",
+  beans: "Bonen",
+  whole_grain_rye_bread: "Volkoren roggebrood",
+  whole_grain_bulgur: "Volkoren bulgur",
+  kale: "Boerenkool",
+  pumpkin: "Pompoen",
+  pumpkin_seeds: "Pompoenpitten",
+  olive_oil: "Olijfolie",
+  fortified_oat_drink: "Verrijkte haverdrink",
+  buckwheat_flakes: "Boekweitvlokken",
+  grains: "Granen",
+  legumes: "Peulvruchten",
+  vegetables: "Groente",
+  fruit: "Fruit",
+  nuts_seeds: "Noten/zaden",
+  plant_based_staples: "Plantaardige basisproducten",
+  view_the_demo: "Bekijk de demo",
+  how_it_works: "Hoe het werkt",
+  the_idea: "Het idee",
+  the_crate: "De krat",
+  research: "Onderzoek",
+  energy: "Energie",
+  protein: "Eiwitten",
+  fats: "Vetten",
+  vitamins: "Vitaminen",
+  minerals: "Mineralen",
+  fibre: "Vezels",
+  whole_grains: "Volkoren granen",
+  lentils: "Linzen",
+  vegetables_fruit: "Groente & fruit",
+  nuts: "Noten",
+  rice: "Rijst",
+  view_your_crate: "Bekijk je krat.",
+  your_weekly_basics_all_in_one_place:
+    "Je basis voor de week, in één overzicht.",
+  make_a_change: "Pas iets aan.",
+  keep_choose_less_or_try_a_demo_alternative:
+    "Houden, minder of een andere demo-keuze.",
+  choose_delivery_or_pickup: "Kies bezorgen of ophalen.",
+  try_a_time_slot_and_a_fictional_loop_point:
+    "Probeer een tijdvak en een fictief LOOP Point.",
+  done: "Klaar.",
+  confirm_your_demo_week_then_get_on_with_your_day:
+    "Bevestig je demo-week. En ga verder met je dag.",
+  good_basics_more_room_to_live: "EEN GOEDE BASIS. MEER RUIMTE OM TE LEVEN.",
+  what_if_good_food_was_simply_taken_care_of:
+    "Wat als goed eten gewoon geregeld was?",
+  a_weekly_foundation_of_everyday_foods_built_around_nourishment:
+    "Een wekelijkse basis van gewone producten. Met voeding, betaalbaarheid en minder gedoe als uitgangspunt.",
+  in_development_explore_the_idea_in_the_demo:
+    "In ontwikkeling. Ontdek het idee in de demo.",
+  concept_image_of_a_green_loop_crate_with_oats_bread_lentils_po:
+    "Verbeelding van een groene loop. krat met havermout, brood, linzen, aardappelen, groente, fruit en noten",
+  a_picture_of_the_idea_the_contents_are_still_being_researched:
+    "Verbeelding van het concept. De inhoud wordt nog onderzocht.",
+  "01_the_question": "01 / DE VRAAG",
+  what_do_we_actually_need: "Wat heeft een mens eigenlijk nodig?",
+  we_started_with_what_your_body_needs_energy_building_blocks_th:
+    "We begonnen bij wat je lijf nodig heeft. Energie. Bouwstoffen. De dingen die je iedere dag verder helpen.",
+  our_question_can_everyday_predominantly_plant_based_foods_toge:
+    "Onze vraag: kunnen gewone, overwegend plantaardige producten samen een goede dagelijkse basis vormen, zonder afhankelijk te zijn van dierlijke producten?",
+  "02_what_they_can_do_together": "02 / WAT ZE SAMEN KUNNEN",
+  not_one_superfood: "Niet één superfood.",
+  a_system: "Een systeem.",
+  different_foods_bring_different_things:
+    "Verschillende producten dragen verschillende dingen bij.",
+  what_matters_is_what_they_provide_together:
+    "Het gaat erom wat ze samen leveren.",
+  illustration_of_everyday_staples_bread_oats_lentils_potato_veg:
+    "Illustratie van gewone basisproducten: brood, havermout, linzen, aardappel, groente, fruit, noten en een drankkarton",
+  examples_of_foods_we_are_researching:
+    "Voorbeelden van producten die we onderzoeken",
+  a_combination_we_are_researching_not_yet_a_validated_meal_plan:
+    "Een combinatie die we onderzoeken. Nog geen gevalideerd voedingsplan.",
+  the_loop_concept_crate_in_the_demo_s_illustration_style:
+    "De LOOP conceptkrat in de illustratiestijl van de demo",
+  concept_crate_example_contents: "Conceptkrat · Voorbeeldinhoud",
+  "03_a_week_at_a_time": "03 / DE WEEK ALS UITGANGSPUNT",
+  your_basics: "Je basis.",
+  every_week: "Iedere week.",
+  we_are_working_on_a_small_recurring_crate_a_foundation_for_you:
+    "We werken aan een klein, terugkerend krat. Een basis voor je week, met ruimte voor je eigen keuken.",
+  what_else_you_eat_is_up_to_you_the_idea_is_for_loop_to_handle:
+    "Wat je daarnaast eet, bepaal je zelf. loop verzorgt straks de basis. Jij houdt de vrijheid.",
+  the_idea_a_full_crate_arrives: "Het idee: een volle krat heen.",
+  an_empty_one_returns_another_round: "Een lege krat terug. Een nieuwe ronde.",
+  "04_you_stay_in_charge": "04 / JIJ BLIJFT IN CONTROLE",
+  as_little_fuss_as_possible: "Zo weinig mogelijk gedoe.",
+  try_how_a_week_with_loop_could_feel_the_app_uses_example_produ:
+    "Probeer hoe een week met loop zou kunnen voelen. De app werkt met voorbeeldproducten en fictieve locaties.",
+  demo_v0_1_nothing_is_ordered_or_delivered:
+    "Demo v0.1 · Er wordt niets besteld of bezorgd.",
+  open_the_working_loop_demo: "Open de werkende LOOP demo",
+  actual_demo_v0_1_screenshot_good_morning_this_week_the_loop_cr:
+    "Echte screenshot van Demo v0.1: Goedemorgen, deze week, de LOOP krat en de mobiele navigatie",
+  the_existing_app_real_interface_demo_data:
+    "De bestaande app. Echte interface, demo-gegevens.",
+  "05_from_idea_to_everyday_life": "05 / VAN IDEE NAAR PRAKTIJK",
+  we_are_still_testing_this: "We zijn dit nog aan het testen.",
+  a_good_idea_is_not_yet_a_proven_system_on_bouw_we_are_research:
+    "Een mooi idee is nog geen bewezen systeem. Op BOUW onderzoeken we het voedselmodel, de kosten en de praktijk.",
+  follow_the_research_on_bouw: "Volg het onderzoek op BOUW",
+  what_belongs_in_the_foundation: "Wat hoort er in de basis?",
+  what_does_it_really_cost: "Wat kost het echt?",
+  do_people_enjoy_eating_it: "Wordt het met plezier gegeten?",
+  what_changes_in_the_kitchen: "Wat verandert er in de keuken?",
+  does_it_work_in_everyday_life: "Werkt het ook in het dagelijks leven?",
+  fully_plant_based_eating_needs_deliberate_attention_to_nutrien:
+    "Volledig plantaardig eten vraagt bewuste aandacht voor onder andere vitamine B12 en, afhankelijk van de situatie, vitamine D. Het huidige krat is niet als volledig voedingspatroon gevalideerd.",
+  loop_is_in_development_there_are_no_active_deliveries_or_loop:
+    "loop is in ontwikkeling. Er zijn nog geen actieve bezorgingen of LOOP Points. BOUW is de plek voor het onderzoek; loop is de plek voor de toekomstige ervaring.",
+  the_idea_is_simple: "DE GEDACHTE IS EENVOUDIG.",
+  the_basics_are_handled: "De basis is geregeld.",
+  the_day_is_yours: "De dag is van jou.",
+  an_idea_in_development_a_demo_to_try_it:
+    "Een idee in ontwikkeling. Een demo om het te ervaren.",
+  research_on_bouw: "Onderzoek op BOUW",
+  try_the_demo: "Probeer de demo",
+  back_to_top: "Terug naar boven",
+  page_not_found: "Pagina niet gevonden.",
+  this_page_doesn_t_exist_head_back_to_loop:
+    "Deze pagina bestaat niet. Ga terug naar loop.",
+  back_to_the_start: "Terug naar de start",
+  something_went_wrong: "Er ging iets mis.",
+  try_again_your_saved_demo_choices_are_kept:
+    "Probeer het opnieuw. Je bewaarde demo-keuzes blijven behouden.",
+  try_again: "Probeer opnieuw",
+  choose_your_language: "Kies je taal",
+  dutch: "Nederlands",
+  english: "Engels",
+  count_days: "{count} dagen",
+  count_products: "{count} producten",
+  count_product_changed: "{count} product aangepast",
+  count_products_changed: "{count} producten aangepast",
+  edit_name: "Pas {name} aan",
+  quantity_for_name: "Hoeveelheid voor {name}",
+  standard_name: "Standaard: {name}",
+  less_name: "Minder: {name}",
+  more_name: "Meer: {name}",
+  replace_name: "Vervangen: {name}",
+  replace_name_alt: "Vervang {name}",
+  undo_name: "Herstel: {name}",
+  instead_of_name: "In plaats van {name} · ",
+  original: " (oorspronkelijk)",
+  name_replacement_amount_quantity_per_week_in_the_demo_your_dem:
+    "{name}: {replacement}, {amount}: {quantity} per week in de demo. Je demo-krat is bijgewerkt.",
+  week_number: "Week {number}",
+  "7_days_for_1_person": "7 DAGEN · VOOR 1 PERSOON",
+  loop_what_if_good_food_was_simply_taken_care_of:
+    "loop. — Wat als goed eten gewoon geregeld was?",
+  a_weekly_food_foundation_with_room_for_your_life_discover_the:
+    "Een wekelijkse voedselbasis, met ruimte voor jouw leven. Ontdek het idee achter loop., probeer de demo en volg het onderzoek op BOUW.",
+  not_one_superfood_a_system_a_food_foundation_in_development_wi:
+    "Niet één superfood. Een systeem. Een voedselbasis in ontwikkeling, met ruimte voor jouw leven.",
+  loop_demo_v0_1: "loop. — Demo v0.1",
+  try_the_loop_product_demo_your_crate_your_choices_all_products:
+    "Probeer de LOOP productdemo. Je krat, jouw keuzes. Alle producten, aanbieders en ontvangstkeuzes zijn fictief.",
+  dry: "droog",
+  for_count_person: "Voor {count} persoon",
+} as const;
+
+export type MessageKey = keyof typeof nl;
+export const en: Record<MessageKey, string> = {
+  skip_to_content: "Skip to content",
+  main_navigation: "Main navigation",
+  mobile_navigation: "Mobile navigation",
+  footer_navigation: "Footer navigation",
+  loop_this_week: "loop. — this week",
+  demo_account_about_this_prototype: "Demo account — about this prototype",
+  demo_account: "Demo account",
+  this_week: "This week",
+  my_crate: "My crate",
+  delivery: "Delivery",
+  previous_weeks: "Previous weeks",
+  previous: "Previous",
+  prototype_v0_1: "Prototype v0.1",
+  restart_demo: "Restart demo",
+  back_to_loop: "Back to loop.",
+  loop_is_currently_a_prototype_providers_delivery_and_public_fu:
+    "LOOP is currently a prototype. Providers, delivery and public funding in this demo are not active.",
+  good_morning: "Good morning.",
+  your_loop_for_this_week_is_ready: "Your LOOP for this week is ready.",
+  the_basics_are_handled_the_day_is_yours:
+    "The basics are handled. The day is yours.",
+  the_previous_rounds: "The previous rounds.",
+  your_crate_your_choices: "Your crate. Your choices.",
+  at_a_time_that_suits_you: "At a time that suits you.",
+  the_basics_are_ready_choose_what_works_for_you:
+    "The basics are ready. Choose what works for you.",
+  choose_a_demo_provider_and_a_time_that_suits_you:
+    "Choose a demo provider and a time that suits you.",
+  your_previous_crates_all_in_one_place_demo:
+    "Your previous crates, all in one place. · Demo",
+  previous_crate: "Previous crate",
+  collected_with_your_next_delivery: "Collected with your next delivery.",
+  bring_your_empty_crate_when_you_collect_the_next_one:
+    "Bring your empty crate when you collect the next one.",
+  a_small_effort_another_round_demo: "A small effort. Another round. · Demo",
+  your_week_at_a_glance: "Your week at a glance",
+  pickup: "Pickup",
+  at_your_door_in_this_demo: "At your door, in this demo.",
+  change_time_or_collection_method: "Change time or collection method",
+  demo_providers: "DEMO PROVIDERS",
+  prepares_your_demo_crate: "Prepares your demo crate",
+  choose_a_provider: "Choose a provider",
+  choose_provider_and_collection_method:
+    "Choose provider and collection method",
+  confirm_your_demo_week: "Confirm your demo week",
+  all_as_you_like_it: "All as you like it?",
+  your_choices_are_ready_confirm_and_get_on_with_your_day:
+    "Your choices are ready. Confirm and get on with your day.",
+  confirm_my_week: "Confirm my week",
+  a_confirmation_in_this_demo_only: "A confirmation in this demo only",
+  your_confirmed_demo_week: "Your confirmed demo week",
+  your_loop_has_been_updated: "Your LOOP has been updated.",
+  edit_my_crate: "Edit my crate",
+  back_to_this_week: "Back to this week",
+  basics_you_can_rely_on_room_to_live: "Basics you can rely on. Room to live.",
+  your_delivery_choice_has_been_updated_in_the_demo_confirm_your:
+    "Your delivery choice has been updated in the demo. Confirm your week when everything feels right.",
+  your_loop_has_been_updated_your_choices_are_confirmed_in_the_d:
+    "Your LOOP has been updated. Your choices are confirmed in the demo.",
+  the_demo_has_restarted_all_choices_have_been_reset:
+    "The demo has restarted. All choices have been reset.",
+  loop_crate: "LOOP CRATE",
+  illustration_of_a_reusable_loop_crate_with_vegetables_fruit_an:
+    "Illustration of a reusable LOOP crate with vegetables, fruit and everyday staples",
+  thoughtfully_filled: "Thoughtfully filled.",
+  a_good_foundation_for: "A good foundation for",
+  your_whole_week: "your whole week.",
+  a_nourishing_foundation: "A nourishing foundation",
+  room_for_your_choices: "Room for your choices",
+  ready_to_confirm: "Ready to confirm",
+  changes_to_your_crate: "Changes to your crate",
+  view_my_crate: "View my crate",
+  swap_products: "Swap products",
+  for_1_person: "For 1 person",
+  what_s_in_your_crate: "What's in your crate",
+  the_basics_for_this_week: "The basics for this week.",
+  demo_candidate_020: "DEMO · Candidate 020",
+  the_contents_and_weekly_quantities_come_from_candidate_020_mod:
+    "The contents and weekly quantities come from Candidate 020 model data for one person. They have not been measured, and nutritional suitability has not been validated. This is not a finalized commercial LOOP crate. Less, more and replacements are demo interactions, not nutritionally optimized or assessed for equivalence.",
+  use_what_you_have: "Use what you have",
+  a_few_ideas_for_your_week: "A few ideas for your week",
+  demo_meal_ideas_using_ingredients_in_your_current_crate_not_co:
+    "Demo meal ideas using ingredients in your current crate. Not complete recipes or a validated meal plan.",
+  there_are_no_demo_ideas_for_this_combination_yet_your_crate_is:
+    "There are no demo ideas for this combination yet. Your crate is still yours to choose.",
+  continue_to_delivery: "Continue to delivery",
+  standard: "Standard",
+  less: "Less",
+  more: "More",
+  replace: "Replace",
+  demo_choices_not_assessed_for_nutritional_equivalence:
+    "Demo choices, not assessed for nutritional equivalence.",
+  demo_quantity_for_this_week_less_and_more_are_example_settings:
+    "Demo quantity for this week. Less and more are example settings, not dietary advice.",
+  this_replacement_uses_the_original_crate_item_s_quantity_for_t:
+    "This replacement uses the original crate item's quantity for the demo; it does not imply equivalent nutritional value.",
+  undo: "Undo",
+  how_would_you_like_to_receive_your_crate:
+    "How would you like to receive your crate?",
+  home_delivery: "Home delivery",
+  loop_point: "LOOP Point",
+  demo_loop_points: "Demo LOOP Points",
+  fictional_locations_with_no_real_addresses_or_partners_nothing:
+    "Fictional locations, with no real addresses or partners. Nothing can be collected here.",
+  delivery_time: "Delivery time",
+  pickup_time: "Pickup time",
+  your_choice_is_saved_in_this_demo_only_nothing_is_booked:
+    "Your choice is saved in this demo only. Nothing is booked.",
+  demo_providers_alt: "Demo providers",
+  in_a_future_loop_service_participating_providers_could_prepare:
+    "In a future LOOP service, participating providers could prepare your weekly crate through existing food and delivery networks.",
+  a_familiar_neighbourhood_shop: "A familiar neighbourhood shop",
+  fresh_food_thoughtfully_put_together: "Fresh food, thoughtfully put together",
+  the_basics_close_to_home: "The basics, close to home",
+  loop_point_demo_north: "LOOP Point Demo North",
+  loop_point_demo_south: "LOOP Point Demo South",
+  fictional_pickup_location_not_an_active_point:
+    "Fictional pickup location · not an active point",
+  fictional_location: "Fictional location",
+  previous_demo_crates: "Previous demo crates",
+  fictional_demo_weeks_no_deliveries_pickups_or_purchases_have_t:
+    "Fictional demo weeks. No deliveries, pickups or purchases have taken place.",
+  in_this_demo_crate: "In this demo crate",
+  changes_in_this_demo_week: "Changes in this demo week",
+  no_changes_in_this_example: "No changes in this example.",
+  go_to_this_week: "Go to this week",
+  lentil_soup: "Lentil soup",
+  rice_with_lentils_and_spinach: "Rice with lentils and spinach",
+  mashed_potatoes_with_spinach: "Mashed potatoes with spinach",
+  oats_with_fruit: "Oats with fruit",
+  oats: "Oats",
+  whole_grain_bread: "Whole-grain bread",
+  potatoes: "Potatoes",
+  green_lentils: "Green lentils",
+  red_lentils: "Red lentils",
+  carrots: "Carrots",
+  spinach: "Spinach",
+  apples: "Apples",
+  orange: "Orange",
+  mixed_nuts: "Mixed nuts",
+  rapeseed_oil: "Rapeseed oil",
+  brown_rice: "Brown rice",
+  fortified_soy_drink: "Fortified soy drink",
+  pear: "Pear",
+  chickpeas: "Chickpeas",
+  beans: "Beans",
+  whole_grain_rye_bread: "Whole-grain rye bread",
+  whole_grain_bulgur: "Whole-grain bulgur",
+  kale: "Kale",
+  pumpkin: "Pumpkin",
+  pumpkin_seeds: "Pumpkin seeds",
+  olive_oil: "Olive oil",
+  fortified_oat_drink: "Fortified oat drink",
+  buckwheat_flakes: "Buckwheat flakes",
+  grains: "Grains",
+  legumes: "Legumes",
+  vegetables: "Vegetables",
+  fruit: "Fruit",
+  nuts_seeds: "Nuts/seeds",
+  plant_based_staples: "Plant-based staples",
+  view_the_demo: "View the demo",
+  how_it_works: "How it works",
+  the_idea: "The idea",
+  the_crate: "The crate",
+  research: "Research",
+  energy: "Energy",
+  protein: "Protein",
+  fats: "Fats",
+  vitamins: "Vitamins",
+  minerals: "Minerals",
+  fibre: "Fibre",
+  whole_grains: "Whole grains",
+  lentils: "Lentils",
+  vegetables_fruit: "Vegetables & fruit",
+  nuts: "Nuts",
+  rice: "Rice",
+  view_your_crate: "View your crate.",
+  your_weekly_basics_all_in_one_place: "Your weekly basics, all in one place.",
+  make_a_change: "Make a change.",
+  keep_choose_less_or_try_a_demo_alternative:
+    "Keep, choose less or try a demo alternative.",
+  choose_delivery_or_pickup: "Choose delivery or pickup.",
+  try_a_time_slot_and_a_fictional_loop_point:
+    "Try a time slot and a fictional LOOP Point.",
+  done: "Done.",
+  confirm_your_demo_week_then_get_on_with_your_day:
+    "Confirm your demo week. Then get on with your day.",
+  good_basics_more_room_to_live: "GOOD BASICS. MORE ROOM TO LIVE.",
+  what_if_good_food_was_simply_taken_care_of:
+    "What if good food was simply taken care of?",
+  a_weekly_foundation_of_everyday_foods_built_around_nourishment:
+    "A weekly foundation of everyday foods. Built around nourishment, affordability and less to think about.",
+  in_development_explore_the_idea_in_the_demo:
+    "In development. Explore the idea in the demo.",
+  concept_image_of_a_green_loop_crate_with_oats_bread_lentils_po:
+    "Concept image of a green loop. crate with oats, bread, lentils, potatoes, vegetables, fruit and nuts",
+  a_picture_of_the_idea_the_contents_are_still_being_researched:
+    "A picture of the idea. The contents are still being researched.",
+  "01_the_question": "01 / THE QUESTION",
+  what_do_we_actually_need: "What do we actually need?",
+  we_started_with_what_your_body_needs_energy_building_blocks_th:
+    "We started with what your body needs. Energy. Building blocks. The things that help you through each day.",
+  our_question_can_everyday_predominantly_plant_based_foods_toge:
+    "Our question: can everyday, predominantly plant-based foods together form a good daily foundation without relying on animal products?",
+  "02_what_they_can_do_together": "02 / WHAT THEY CAN DO TOGETHER",
+  not_one_superfood: "Not one superfood.",
+  a_system: "A system.",
+  different_foods_bring_different_things:
+    "Different foods bring different things.",
+  what_matters_is_what_they_provide_together:
+    "What matters is what they provide together.",
+  illustration_of_everyday_staples_bread_oats_lentils_potato_veg:
+    "Illustration of everyday staples: bread, oats, lentils, potato, vegetables, fruit, nuts and a drink carton",
+  examples_of_foods_we_are_researching: "Examples of foods we are researching",
+  a_combination_we_are_researching_not_yet_a_validated_meal_plan:
+    "A combination we are researching. Not yet a validated meal plan.",
+  the_loop_concept_crate_in_the_demo_s_illustration_style:
+    "The LOOP concept crate in the demo's illustration style",
+  concept_crate_example_contents: "Concept crate · Example contents",
+  "03_a_week_at_a_time": "03 / A WEEK AT A TIME",
+  your_basics: "Your basics.",
+  every_week: "Every week.",
+  we_are_working_on_a_small_recurring_crate_a_foundation_for_you:
+    "We are working on a small, recurring crate. A foundation for your week, with room for your own kitchen.",
+  what_else_you_eat_is_up_to_you_the_idea_is_for_loop_to_handle:
+    "What else you eat is up to you. The idea is for loop to handle the basics. You keep your freedom.",
+  the_idea_a_full_crate_arrives: "The idea: a full crate arrives.",
+  an_empty_one_returns_another_round: "An empty one returns. Another round.",
+  "04_you_stay_in_charge": "04 / YOU STAY IN CHARGE",
+  as_little_fuss_as_possible: "As little fuss as possible.",
+  try_how_a_week_with_loop_could_feel_the_app_uses_example_produ:
+    "Try how a week with loop could feel. The app uses example products and fictional locations.",
+  demo_v0_1_nothing_is_ordered_or_delivered:
+    "Demo v0.1 · Nothing is ordered or delivered.",
+  open_the_working_loop_demo: "Open the working LOOP demo",
+  actual_demo_v0_1_screenshot_good_morning_this_week_the_loop_cr:
+    "Actual Demo v0.1 screenshot: Good morning, this week, the LOOP crate and mobile navigation",
+  the_existing_app_real_interface_demo_data:
+    "The existing app. Real interface, demo data.",
+  "05_from_idea_to_everyday_life": "05 / FROM IDEA TO EVERYDAY LIFE",
+  we_are_still_testing_this: "We are still testing this.",
+  a_good_idea_is_not_yet_a_proven_system_on_bouw_we_are_research:
+    "A good idea is not yet a proven system. On BOUW, we are researching the food model, the costs and how it works in practice.",
+  follow_the_research_on_bouw: "Follow the research on BOUW",
+  what_belongs_in_the_foundation: "What belongs in the foundation?",
+  what_does_it_really_cost: "What does it really cost?",
+  do_people_enjoy_eating_it: "Do people enjoy eating it?",
+  what_changes_in_the_kitchen: "What changes in the kitchen?",
+  does_it_work_in_everyday_life: "Does it work in everyday life?",
+  fully_plant_based_eating_needs_deliberate_attention_to_nutrien:
+    "Fully plant-based eating needs deliberate attention to nutrients including vitamin B12 and, depending on the situation, vitamin D. The current crate has not been validated as a complete diet.",
+  loop_is_in_development_there_are_no_active_deliveries_or_loop:
+    "loop is in development. There are no active deliveries or LOOP Points. BOUW is where the research lives; loop is where the future experience takes shape.",
+  the_idea_is_simple: "THE IDEA IS SIMPLE.",
+  the_basics_are_handled: "The basics are handled.",
+  the_day_is_yours: "The day is yours.",
+  an_idea_in_development_a_demo_to_try_it:
+    "An idea in development. A demo to try it.",
+  research_on_bouw: "Research on BOUW",
+  try_the_demo: "Try the demo",
+  back_to_top: "Back to top",
+  page_not_found: "Page not found.",
+  this_page_doesn_t_exist_head_back_to_loop:
+    "This page doesn't exist. Head back to loop.",
+  back_to_the_start: "Back to the start",
+  something_went_wrong: "Something went wrong.",
+  try_again_your_saved_demo_choices_are_kept:
+    "Try again. Your saved demo choices are kept.",
+  try_again: "Try again",
+  choose_your_language: "Choose your language",
+  dutch: "Dutch",
+  english: "English",
+  count_days: "{count} days",
+  count_products: "{count} products",
+  count_product_changed: "{count} product changed",
+  count_products_changed: "{count} products changed",
+  edit_name: "Edit {name}",
+  quantity_for_name: "Quantity for {name}",
+  standard_name: "Standard: {name}",
+  less_name: "Less: {name}",
+  more_name: "More: {name}",
+  replace_name: "Replace: {name}",
+  replace_name_alt: "Replace {name}",
+  undo_name: "Undo: {name}",
+  instead_of_name: "Instead of {name} · ",
+  original: " (original)",
+  name_replacement_amount_quantity_per_week_in_the_demo_your_dem:
+    "{name}: {replacement}, {amount}: {quantity} per week in the demo. Your demo crate has been updated.",
+  week_number: "Week {number}",
+  "7_days_for_1_person": "7 DAYS · FOR 1 PERSON",
+  loop_what_if_good_food_was_simply_taken_care_of:
+    "loop. — What if good food was simply taken care of?",
+  a_weekly_food_foundation_with_room_for_your_life_discover_the:
+    "A weekly food foundation, with room for your life. Discover the idea behind loop., try the demo and follow the research on BOUW.",
+  not_one_superfood_a_system_a_food_foundation_in_development_wi:
+    "Not one superfood. A system. A food foundation in development, with room for your life.",
+  loop_demo_v0_1: "loop. — Demo v0.1",
+  try_the_loop_product_demo_your_crate_your_choices_all_products:
+    "Try the LOOP product demo. Your crate, your choices. All products, providers and collection options are fictional.",
+  dry: "dry",
+  for_count_person: "For {count} person",
+};

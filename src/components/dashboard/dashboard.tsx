@@ -1,4 +1,7 @@
 "use client";
+import { useLocale } from "@/i18n/locale-provider";
+import { datePeriod, dayName } from "@/i18n/locale";
+import { pointName } from "@/i18n/data";
 
 import { useEffect, useRef, useState } from "react";
 import { AppShell } from "@/components/layout/app-shell";
@@ -9,6 +12,7 @@ import { ProviderChoice } from "@/components/providers/provider-choice";
 import { DeliveryChoice } from "@/components/delivery/delivery-choice";
 import { Icon } from "@/components/ui/icon";
 import { ingredientName, itemChanges, mockCrate } from "@/data/mock-crate";
+import { itemQuantity } from "@/data/model-quantities";
 import { mockPoints, mockProviders, mockSlots } from "@/data/mock-providers";
 import { useDemoWeek } from "@/lib/use-demo-week";
 import type {
@@ -18,17 +22,18 @@ import type {
   WeekPreferences,
 } from "@/types/loop";
 
-export function Dashboard() {
+export function Dashboard({ initialView = "week" }: { initialView?: View }) {
+  const { locale, t } = useLocale();
   const { week, updateWeek, updateItem, resetWeek } = useDemoWeek();
-  const [view, setView] = useState<View>("week");
+  const [view, setView] = useState<View>(initialView);
   const [notice, setNotice] = useState("");
   const heading = useRef<HTMLHeadingElement>(null);
   const focusNext = useRef(false);
   const provider = mockProviders.find((item) => item.id === week.provider)!;
   const slot = mockSlots.find((item) => item.id === week.slot)!;
   const point = mockPoints.find((item) => item.id === week.point)!;
-  const changes = itemChanges(week.items);
-  const receipt = week.fulfilment === "delivery" ? "Bezorging" : "Ophalen";
+  const changes = itemChanges(week.items, locale);
+  const receipt = week.fulfilment === "delivery" ? t("delivery") : t("pickup");
 
   useEffect(() => {
     if (focusNext.current) {
@@ -44,29 +49,46 @@ export function Dashboard() {
     }
     focusNext.current = true;
     setView(next);
+    const url = new URL(window.location.href);
+    if (next === "week") url.searchParams.delete("view");
+    else url.searchParams.set("view", next);
+    window.history.replaceState(window.history.state, "", url);
   }
   function change(patch: Partial<WeekPreferences>) {
     updateWeek({ ...patch, confirmed: false });
     setNotice(
-      "Je ontvangstkeuze is aangepast in de demo. Bevestig je week wanneer alles naar wens is.",
+      t("your_delivery_choice_has_been_updated_in_the_demo_confirm_your"),
     );
   }
   function changeItem(id: CrateItemId, patch: Partial<ItemChoice>) {
     updateItem(id, patch);
     const next = { ...week.items[id], ...patch };
     setNotice(
-      `${ingredientName(id)}: ${ingredientName(next.ingredient)}${next.amount === "less" ? ", minder" : ""}. Je demo-krat is bijgewerkt.`,
+      t("name_replacement_amount_quantity_per_week_in_the_demo_your_dem", {
+        name: ingredientName(id, locale),
+        replacement: ingredientName(next.ingredient, locale),
+        amount: t(
+          next.amount === "less"
+            ? "less"
+            : next.amount === "more"
+              ? "more"
+              : "standard",
+        ).toLowerCase(),
+        quantity: itemQuantity(id, next, locale),
+      }),
     );
   }
   function confirm() {
     updateWeek({ confirmed: true });
-    setNotice("Je LOOP is aangepast. Je keuzes zijn bevestigd in de demo.");
+    setNotice(
+      t("your_loop_has_been_updated_your_choices_are_confirmed_in_the_d"),
+    );
     navigate("week");
     if (view === "week") heading.current?.focus();
   }
   function reset() {
     resetWeek();
-    setNotice("De demo is opnieuw gestart. Alle keuzes zijn teruggezet.");
+    setNotice(t("the_demo_has_restarted_all_choices_have_been_reset"));
     navigate("week");
   }
 
@@ -93,15 +115,15 @@ export function Dashboard() {
       </span>
       <div>
         <h2 className="eyebrow" id="return-heading">
-          Vorige krat
+          {t("previous_crate")}{" "}
         </h2>
         <p>
           {week.fulfilment === "delivery"
-            ? "Wordt meegenomen bij je volgende bezorging."
-            : "Neem je lege krat mee als je de volgende ophaalt."}
+            ? t("collected_with_your_next_delivery")
+            : t("bring_your_empty_crate_when_you_collect_the_next_one")}
         </p>
         <span className="fine-print">
-          Een kleine moeite. Een nieuwe ronde. · Demo
+          {t("a_small_effort_another_round_demo")}{" "}
         </span>
       </div>
     </section>
@@ -113,48 +135,52 @@ export function Dashboard() {
         <div className="week-topline">
           <span className="eyebrow">
             {view === "history"
-              ? "EERDER"
+              ? t("previous").toUpperCase()
               : view === "crate"
-                ? "MIJN KRAT"
+                ? t("my_crate").toUpperCase()
                 : view === "delivery"
-                  ? "BEZORGING"
-                  : "DEZE WEEK"}
+                  ? t("delivery").toUpperCase()
+                  : t("this_week").toUpperCase()}
           </span>
           <span className="week-date">
-            {mockCrate.period} <span className="date-dot" /> {mockCrate.week}
+            {datePeriod(mockCrate.start, mockCrate.end, locale)}{" "}
+            <span className="date-dot" />{" "}
+            {t("week_number", { number: mockCrate.week })}
           </span>
         </div>
         <div className="hero">
           <h1 ref={heading} tabIndex={-1}>
             {view === "history"
-              ? "De vorige rondes."
+              ? t("the_previous_rounds")
               : view === "crate"
-                ? "Jouw krat. Jouw keuzes."
+                ? t("your_crate_your_choices")
                 : view === "delivery"
-                  ? "Op jouw moment."
-                  : "Goedemorgen."}
+                  ? t("at_a_time_that_suits_you")
+                  : t("good_morning")}
           </h1>
           {view === "week" && (
             <>
-              <p className="hero-message">Je LOOP voor deze week is klaar.</p>
+              <p className="hero-message">
+                {t("your_loop_for_this_week_is_ready")}
+              </p>
               <p className="hero-subtitle">
-                De basis is geregeld. De dag is van jou.
+                {t("the_basics_are_handled_the_day_is_yours")}{" "}
               </p>
             </>
           )}
           {view === "crate" && (
             <p className="hero-subtitle">
-              De basis staat klaar. Kies wat bij je past.
+              {t("the_basics_are_ready_choose_what_works_for_you")}{" "}
             </p>
           )}
           {view === "delivery" && (
             <p className="hero-subtitle">
-              Kies een demo-aanbieder en een moment dat je uitkomt.
+              {t("choose_a_demo_provider_and_a_time_that_suits_you")}{" "}
             </p>
           )}
           {view === "history" && (
             <p className="hero-subtitle">
-              Je eerdere kratten, rustig op een rij. · Demo
+              {t("your_previous_crates_all_in_one_place_demo")}{" "}
             </p>
           )}
         </div>
@@ -166,7 +192,10 @@ export function Dashboard() {
               changes={changes}
               confirmed={week.confirmed}
             />
-            <aside className="week-logistics" aria-label="Je week in het kort">
+            <aside
+              className="week-logistics"
+              aria-label={t("your_week_at_a_glance")}
+            >
               <section className="delivery-summary">
                 <div className="section-label">
                   <Icon
@@ -175,35 +204,41 @@ export function Dashboard() {
                   <h2 className="eyebrow">{receipt}</h2>
                   <span className="demo-small">DEMO</span>
                 </div>
-                <p className="delivery-day">{slot.day}</p>
+                <p className="delivery-day">{dayName(slot.day, locale)}</p>
                 <p className="delivery-time">{slot.time}</p>
                 <p className="muted">
                   {week.fulfilment === "delivery"
-                    ? "Aan je deur, in deze demo."
-                    : `${point.name} · Fictieve locatie`}
+                    ? t("at_your_door_in_this_demo")
+                    : `${pointName(point.id, locale)} · ${t("fictional_location")}`}
                 </p>
-                <details className="inline-editor">
+                <details
+                  className="inline-editor"
+                  data-disclosure="delivery-summary"
+                >
                   <summary>
-                    Moment of ontvangst wijzigen{" "}
+                    {t("change_time_or_collection_method")}{" "}
                     <span aria-hidden="true">↗</span>
                   </summary>
                   {deliveryEditor}
                 </details>
               </section>
               <section className="provider-summary">
-                <h2 className="eyebrow">DEMO-AANBIEDERS</h2>
+                <h2 className="eyebrow">{t("demo_providers")}</h2>
                 <div className="provider-name">
                   <span className="store-icon">
                     <Icon name="crate" />
                   </span>
                   <div>
                     <strong>{provider.name}</strong>
-                    <span>Stelt je demo-krat samen</span>
+                    <span>{t("prepares_your_demo_crate")}</span>
                   </div>
                 </div>
-                <details className="inline-editor">
+                <details
+                  className="inline-editor"
+                  data-disclosure="provider-summary"
+                >
                   <summary>
-                    Aanbieder kiezen <span aria-hidden="true">↗</span>
+                    {t("choose_a_provider")} <span aria-hidden="true">↗</span>
                   </summary>
                   {providerEditor}
                 </details>
@@ -223,7 +258,7 @@ export function Dashboard() {
         {view === "delivery" && (
           <section
             className="detail-panel delivery-panel"
-            aria-label="Aanbieder en ontvangst kiezen"
+            aria-label={t("choose_provider_and_collection_method")}
           >
             <div>{providerEditor}</div>
             <div>{deliveryEditor}</div>
@@ -231,54 +266,64 @@ export function Dashboard() {
         )}
         {view === "history" && <CrateHistory onBack={() => navigate("week")} />}
         {view !== "history" && !week.confirmed && (
-          <section className="confirm-bar" aria-label="Je demo-week bevestigen">
+          <section
+            className="confirm-bar"
+            aria-label={t("confirm_your_demo_week")}
+          >
             <div>
-              <h2>Alles naar wens?</h2>
-              <p>Je keuzes staan klaar. Bevestig en laat het los.</p>
+              <h2>{t("all_as_you_like_it")}</h2>
+              <p>
+                {t("your_choices_are_ready_confirm_and_get_on_with_your_day")}
+              </p>
               <span className="confirm-summary">
-                {provider.name} · {receipt} · {slot.day} {slot.time}
-                {week.fulfilment === "pickup" ? ` · ${point.name}` : ""}
+                {provider.name} · {receipt} · {dayName(slot.day, locale)}{" "}
+                {slot.time}
+                {week.fulfilment === "pickup"
+                  ? ` · ${pointName(point.id, locale)}`
+                  : ""}
                 {changes.length
-                  ? ` · ${changes.length} ${changes.length === 1 ? "product aangepast" : "producten aangepast"}`
+                  ? ` · ${t(changes.length === 1 ? "count_product_changed" : "count_products_changed", { count: changes.length })}`
                   : ""}
               </span>
             </div>
             <button className="button primary confirm-button" onClick={confirm}>
-              Bevestig mijn week <Icon name="check" />
+              {t("confirm_my_week")} <Icon name="check" />
             </button>
             <span className="confirm-demo">
-              Alleen een bevestiging in deze demo
+              {t("a_confirmation_in_this_demo_only")}{" "}
             </span>
           </section>
         )}
         {view !== "history" && week.confirmed && (
           <section
             className="confirm-bar confirmed-bar"
-            aria-label="Je bevestigde demo-week"
+            aria-label={t("your_confirmed_demo_week")}
           >
             <div>
               <h2>
-                <Icon name="check" /> Je LOOP is aangepast.
+                <Icon name="check" /> {t("your_loop_has_been_updated")}{" "}
               </h2>
-              <p>De basis is geregeld. De dag is van jou.</p>
+              <p>{t("the_basics_are_handled_the_day_is_yours")}</p>
               <span className="confirm-summary">
-                {receipt} · {slot.day} {slot.time} ·{" "}
-                {week.fulfilment === "pickup" ? point.name : provider.name} ·
-                Demo
+                {receipt} · {dayName(slot.day, locale)} {slot.time} ·{" "}
+                {week.fulfilment === "pickup"
+                  ? pointName(point.id, locale)
+                  : provider.name}{" "}
+                · Demo
               </span>
             </div>
             <button
               className="text-button"
               onClick={() => navigate(view === "week" ? "crate" : "week")}
             >
-              {view === "week" ? "Mijn krat aanpassen" : "Terug naar deze week"}{" "}
+              {view === "week" ? t("edit_my_crate") : t("back_to_this_week")}{" "}
               <Icon name="arrow" />
             </button>
           </section>
         )}
         <div className="quiet-line">
           <Icon name="leaf" />
-          <span>Een basis om op te vertrouwen. Ruimte om te leven.</span>
+          <span>{t("basics_you_can_rely_on_room_to_live")}</span>
         </div>
         <span className="sr-only" role="status">
           {notice}

@@ -5,10 +5,11 @@ import type { DemoHistoryWeek } from "@/types/loop";
 export const mockHistory: DemoHistoryWeek[] = [
   {
     id: "week-40",
-    label: "Week 40",
-    period: "28 september–4 oktober",
+    week: 40,
+    start: "2026-09-28",
+    end: "2026-10-04",
     fulfilment: "delivery",
-    day: "Woensdag",
+    day: "wednesday",
     time: "18:00–20:00",
     items: {
       ...initialItems,
@@ -17,11 +18,12 @@ export const mockHistory: DemoHistoryWeek[] = [
   },
   {
     id: "week-39",
-    label: "Week 39",
-    period: "21–27 september",
+    week: 39,
+    start: "2026-09-21",
+    end: "2026-09-27",
     fulfilment: "pickup",
     point: "demo-zuid",
-    day: "Donderdag",
+    day: "thursday",
     time: "16:00–18:00",
     items: {
       ...initialItems,
@@ -31,10 +33,11 @@ export const mockHistory: DemoHistoryWeek[] = [
   },
   {
     id: "week-38",
-    label: "Week 38",
-    period: "14–20 september",
+    week: 38,
+    start: "2026-09-14",
+    end: "2026-09-20",
     fulfilment: "delivery",
-    day: "Vrijdag",
+    day: "friday",
     time: "10:00–12:00",
     items: { ...initialItems },
   },

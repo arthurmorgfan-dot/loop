@@ -1,6 +1,8 @@
-import { crateItems, ingredientName } from "@/data/mock-crate";
-import { mockMeals } from "@/data/mock-meals";
 import { mockUser } from "@/data/mock-user";
+import { useLocale } from "@/i18n/locale-provider";
+import { crateItems, ingredientName, mockCrate } from "@/data/mock-crate";
+import { mockMeals } from "@/data/mock-meals";
+import { mealKeys } from "@/i18n/data";
 import { ProductChoice } from "@/components/products/product-choice";
 import { Icon } from "@/components/ui/icon";
 import type { CrateItemId, ItemChoice, WeekPreferences } from "@/types/loop";
@@ -16,6 +18,7 @@ export function CrateContents({
   onBack: () => void;
   onDelivery: () => void;
 }) {
+  const { locale, t } = useLocale();
   const available = new Set(
     Object.values(items).map((choice) => choice.ingredient),
   );
@@ -29,19 +32,31 @@ export function CrateContents({
       <div className="panel-top">
         <div>
           <p className="eyebrow">
-            7 DAGEN · {mockUser.household.toUpperCase()}
+            {t("count_days", { count: mockCrate.days }).toUpperCase()} ·{" "}
+            {t("for_count_person", {
+              count: mockUser.householdSize,
+            }).toUpperCase()}
           </p>
-          <h2 id="contents-heading">Dit zit in je demo-krat</h2>
+          <h2 id="contents-heading">{t("what_s_in_your_crate")}</h2>
         </div>
         <button className="text-button" onClick={onBack}>
-          Terug naar deze week <Icon name="arrow" />
+          {t("back_to_this_week")} <Icon name="arrow" />
         </button>
       </div>
-      <p className="fine-print crate-demo-note">
-        Candidate 020 · Demo-inhoud, zonder vastgestelde hoeveelheden of
-        voedingskundige validatie. Minder is een voorbeeldkeuze, geen exact
-        gewicht.
+      <p className="crate-inventory-summary">
+        <strong>{t("count_products", { count: crateItems.length })}</strong> ·{" "}
+        {t("the_basics_for_this_week")}
       </p>
+      <details className="crate-model-note" data-disclosure="model-note">
+        <summary>
+          {t("demo_candidate_020")} <span aria-hidden="true">ⓘ</span>
+        </summary>
+        <p className="fine-print">
+          {t(
+            "the_contents_and_weekly_quantities_come_from_candidate_020_mod",
+          )}{" "}
+        </p>
+      </details>
       <ul className="category-list item-list">
         {crateItems.map((item) => (
           <ProductChoice
@@ -52,24 +67,31 @@ export function CrateContents({
           />
         ))}
       </ul>
-      <details className="inline-editor meal-ideas">
+      <details
+        className="inline-editor meal-ideas"
+        data-disclosure="meal-ideas"
+      >
         <summary>
-          Gebruik wat je hebt <span aria-hidden="true">↗</span>
+          {t("use_what_you_have")} <span aria-hidden="true">↗</span>
         </summary>
-        <h3>Een paar ideeën voor je week</h3>
+        <h3>{t("a_few_ideas_for_your_week")}</h3>
         <p className="fine-print">
-          Demo-maaltijdideeën met ingrediënten uit jouw huidige krat. Geen
-          complete recepten of gevalideerd voedingsplan.
+          {t(
+            "demo_meal_ideas_using_ingredients_in_your_current_crate_not_co",
+          )}{" "}
         </p>
         {meals.length ? (
           <ul>
             {meals.map((meal) => (
-              <li key={meal.name}>
-                <strong>{meal.name}</strong>
+              <li key={meal.id}>
+                <strong>{t(mealKeys[meal.id])}</strong>
                 <span>
                   {meal.groups
                     .map((group) =>
-                      ingredientName(group.find((id) => available.has(id))!),
+                      ingredientName(
+                        group.find((id) => available.has(id))!,
+                        locale,
+                      ),
                     )
                     .join(" · ")}
                 </span>
@@ -78,13 +100,14 @@ export function CrateContents({
           </ul>
         ) : (
           <p className="muted">
-            Voor deze combinatie zijn er nog geen demo-ideeën. Je krat blijft
-            helemaal jouw keuze.
+            {t(
+              "there_are_no_demo_ideas_for_this_combination_yet_your_crate_is",
+            )}{" "}
           </p>
         )}
       </details>
       <button className="button secondary crate-next" onClick={onDelivery}>
-        Verder naar bezorging <Icon name="arrow" />
+        {t("continue_to_delivery")} <Icon name="arrow" />
       </button>
     </section>
   );

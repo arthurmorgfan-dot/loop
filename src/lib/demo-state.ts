@@ -29,7 +29,10 @@ export function parseDemoWeek(raw: string | null): WeekPreferences {
           item.id,
           {
             ingredient,
-            amount: choice.amount === "less" ? "less" : "standard",
+            amount:
+              choice.amount === "less" || choice.amount === "more"
+                ? choice.amount
+                : "standard",
           },
         ];
       }),

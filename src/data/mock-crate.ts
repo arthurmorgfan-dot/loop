@@ -1,3 +1,5 @@
+import { translations, type Locale } from "@/i18n/locale";
+import { ingredientKeys } from "@/i18n/data";
 import type {
   CrateItem,
   CrateItemId,
@@ -7,115 +9,97 @@ import type {
   WeekPreferences,
 } from "@/types/loop";
 
-export const ingredients: DemoIngredient[] = [
-  { id: "oats", name: "Havermout" },
-  { id: "wholegrain-bread", name: "Volkorenbrood" },
-  { id: "potatoes", name: "Aardappelen" },
-  { id: "green-lentils", name: "Groene linzen" },
-  { id: "red-lentils", name: "Rode linzen" },
-  { id: "carrots", name: "Wortels" },
-  { id: "spinach", name: "Spinazie" },
-  { id: "apples", name: "Appels" },
-  { id: "orange", name: "Sinaasappel" },
-  { id: "mixed-nuts", name: "Gemengde noten" },
-  { id: "rapeseed-oil", name: "Koolzaadolie" },
-  { id: "brown-rice", name: "Zilvervliesrijst" },
-  { id: "soy-drink", name: "Verrijkte sojadrink" },
-  { id: "pear", name: "Peer" },
-  { id: "chickpeas", name: "Kikkererwten" },
-  { id: "beans", name: "Bonen" },
-  { id: "rye-bread", name: "Volkoren roggebrood" },
-  { id: "bulgur", name: "Volkoren bulgur" },
-  { id: "kale", name: "Boerenkool" },
-  { id: "pumpkin", name: "Pompoen" },
-  { id: "pumpkin-seeds", name: "Pompoenpitten" },
-  { id: "olive-oil", name: "Olijfolie" },
-  { id: "oat-drink", name: "Verrijkte haverdrink" },
-  { id: "buckwheat-flakes", name: "Boekweitvlokken" },
-];
+export const ingredients: DemoIngredient[] = (
+  Object.keys(ingredientKeys) as IngredientId[]
+).map((id) => ({ id }));
 
-// Candidate 020 ingredient names supplied for the product demo. No verified weights or nutrition model.
+// Candidate 020 model ingredients. Quantities are supplied model inputs, not validated dietary recommendations.
 export const crateItems: CrateItem[] = [
   {
     id: "oats",
-    category: "Granen",
+    category: "grains",
     symbol: "grain",
     alternatives: ["buckwheat-flakes"],
   },
   {
     id: "wholegrain-bread",
-    category: "Granen",
+    category: "grains",
     symbol: "grain",
     alternatives: ["rye-bread"],
   },
   {
     id: "potatoes",
-    category: "Aardappelen",
+    category: "potatoes",
     symbol: "seed",
     alternatives: ["brown-rice", "bulgur"],
   },
   {
     id: "green-lentils",
-    category: "Peulvruchten",
+    category: "legumes",
     symbol: "seed",
     alternatives: ["chickpeas", "beans"],
   },
   {
     id: "red-lentils",
-    category: "Peulvruchten",
+    category: "legumes",
     symbol: "seed",
     alternatives: ["green-lentils", "chickpeas", "beans"],
   },
   {
     id: "carrots",
-    category: "Groente",
+    category: "vegetables",
     symbol: "leaf",
     alternatives: ["pumpkin"],
   },
   {
     id: "spinach",
-    category: "Groente",
+    category: "vegetables",
     symbol: "leaf",
     alternatives: ["kale"],
   },
   {
     id: "apples",
-    category: "Fruit",
+    category: "fruit",
     symbol: "apple",
     alternatives: ["orange", "pear"],
   },
   {
     id: "orange",
-    category: "Fruit",
+    category: "fruit",
     symbol: "apple",
     alternatives: ["apples", "pear"],
   },
   {
     id: "mixed-nuts",
-    category: "Noten/zaden",
+    category: "nuts-seeds",
     symbol: "seed",
     alternatives: ["pumpkin-seeds"],
   },
   {
     id: "rapeseed-oil",
-    category: "Plantaardige basisproducten",
+    category: "plant-staples",
     symbol: "leaf",
     alternatives: ["olive-oil"],
   },
   {
     id: "brown-rice",
-    category: "Granen",
+    category: "grains",
     symbol: "grain",
     alternatives: ["bulgur"],
   },
   {
     id: "soy-drink",
-    category: "Plantaardige basisproducten",
+    category: "plant-staples",
     symbol: "leaf",
     alternatives: ["oat-drink"],
   },
 ];
-export const mockCrate = { period: "5–11 oktober", week: "Week 41", days: 7 };
+export const mockCrate = {
+  start: "2026-10-05",
+  end: "2026-10-11",
+  week: 41,
+  days: 7,
+};
 export const initialItems = Object.fromEntries(
   crateItems.map((item) => [
     item.id,
@@ -131,22 +115,27 @@ export const defaultWeek: WeekPreferences = {
   slot: "thursday-morning",
   confirmed: false,
 };
-export function ingredientName(id: IngredientId) {
-  return ingredients.find((ingredient) => ingredient.id === id)!.name;
+export function ingredientName(id: IngredientId, locale: Locale = "nl") {
+  return translations(locale)(ingredientKeys[id]);
 }
-export function itemChanges(items: WeekPreferences["items"]) {
+export function itemChanges(
+  items: WeekPreferences["items"],
+  locale: Locale = "nl",
+) {
+  const t = translations(locale);
   return crateItems.flatMap((item) => {
     const choice = items[item.id];
-    const changed = choice.ingredient !== item.id || choice.amount === "less";
+    const changed =
+      choice.ingredient !== item.id || choice.amount !== "standard";
     if (!changed) return [];
     const replacement =
       choice.ingredient !== item.id
-        ? `${ingredientName(item.id)} → ${ingredientName(choice.ingredient)}`
-        : ingredientName(item.id);
+        ? `${ingredientName(item.id, locale)} → ${ingredientName(choice.ingredient, locale)}`
+        : ingredientName(item.id, locale);
     return [
       {
         id: item.id,
-        text: `${replacement}${choice.amount === "less" ? " · minder" : ""}`,
+        text: `${replacement}${choice.amount === "standard" ? "" : ` · ${t(choice.amount === "less" ? "less" : "more").toLowerCase()}`}`,
       },
     ];
   });

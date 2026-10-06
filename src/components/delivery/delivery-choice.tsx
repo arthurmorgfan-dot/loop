@@ -1,3 +1,6 @@
+import { dayName } from "@/i18n/locale";
+import { pointName } from "@/i18n/data";
+import { useLocale } from "@/i18n/locale-provider";
 import { mockPoints, mockSlots } from "@/data/mock-providers";
 import type { Fulfilment, PointId, SlotId } from "@/types/loop";
 
@@ -16,15 +19,16 @@ export function DeliveryChoice({
   onPoint: (value: PointId) => void;
   onSlot: (value: SlotId) => void;
 }) {
+  const { locale, t } = useLocale();
   return (
     <div className="delivery-choice">
       <fieldset>
-        <legend>Hoe ontvang je je krat?</legend>
+        <legend>{t("how_would_you_like_to_receive_your_crate")}</legend>
         <div className="food-options">
           {(
             [
-              { id: "delivery", name: "Thuisbezorgd" },
-              { id: "pickup", name: "LOOP Point" },
+              { id: "delivery", name: t("home_delivery") },
+              { id: "pickup", name: t("loop_point") },
             ] as const
           ).map((option) => (
             <label key={option.id} className="radio-tile">
@@ -41,10 +45,11 @@ export function DeliveryChoice({
       </fieldset>
       {fulfilment === "pickup" && (
         <fieldset className="pickup-points">
-          <legend>Demo LOOP Points</legend>
+          <legend>{t("demo_loop_points")}</legend>
           <p className="fine-print">
-            Fictieve locaties, zonder echte adressen of partners. Hier kun je
-            niets ophalen.
+            {t(
+              "fictional_locations_with_no_real_addresses_or_partners_nothing",
+            )}{" "}
           </p>
           <div className="provider-options">
             {mockPoints.map((location) => (
@@ -56,8 +61,10 @@ export function DeliveryChoice({
                   onChange={() => onPoint(location.id)}
                 />
                 <span>
-                  <strong>{location.name}</strong>
-                  <small>{location.description}</small>
+                  <strong>{pointName(location.id, locale)}</strong>
+                  <small>
+                    {t("fictional_pickup_location_not_an_active_point")}
+                  </small>
                 </span>
               </label>
             ))}
@@ -65,7 +72,7 @@ export function DeliveryChoice({
         </fieldset>
       )}
       <label className="select-label" htmlFor="time-slot">
-        {fulfilment === "delivery" ? "Bezorgmoment" : "Ophaalmoment"}{" "}
+        {fulfilment === "delivery" ? t("delivery_time") : t("pickup_time")}{" "}
         <span className="muted">· demo</span>
       </label>
       <select
@@ -75,12 +82,12 @@ export function DeliveryChoice({
       >
         {mockSlots.map((option) => (
           <option key={option.id} value={option.id}>
-            {option.day} · {option.time}
+            {dayName(option.day, locale)} · {option.time}
           </option>
         ))}
       </select>
       <p className="fine-print">
-        Je keuze wordt alleen in deze demo bewaard. Er wordt niets geboekt.
+        {t("your_choice_is_saved_in_this_demo_only_nothing_is_booked")}{" "}
       </p>
     </div>
   );

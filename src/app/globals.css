@@ -1381,3 +1381,142 @@ select {
 .mobile-nav button {
   overflow-wrap: anywhere;
 }
+
+/* Mijn krat: food first, with only one ingredient editor open at a time. */
+.crate-inventory-summary {
+  margin: 18px 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.crate-inventory-summary strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.crate-model-note {
+  margin-bottom: 14px;
+  max-width: 740px;
+}
+.crate-model-note summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  width: fit-content;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+}
+.crate-model-note summary::-webkit-details-marker,
+.ingredient-editor > summary::-webkit-details-marker {
+  display: none;
+}
+.crate-model-note .fine-print {
+  padding: 8px 0 16px;
+}
+.ingredient-editor > .item-heading {
+  list-style: none;
+  cursor: pointer;
+  min-height: 76px;
+  margin: 0;
+  width: 100%;
+}
+.item-heading .category-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: transparent;
+}
+.ingredient-art {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+.ingredient-open {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--green);
+}
+.ingredient-editor[open] > summary .ingredient-open {
+  transform: rotate(90deg);
+}
+.ingredient-editor > .item-actions {
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.item-quantity-note {
+  margin: 12px 0 0;
+  font-size: 12px;
+}
+.item-list {
+  align-items: start;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ingredient-open {
+    transition: transform 0.16s ease;
+  }
+}
+
+/* The existing header stays in place; its measured height also protects focus/anchors. */
+:root {
+  --header-height: 79px;
+}
+html {
+  scroll-padding-top: calc(var(--header-height) + 24px);
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: var(--background);
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.language-switch {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.language-switch > span {
+  display: flex;
+  align-items: center;
+}
+.language-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 48px;
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.language-switch a[aria-current="page"] {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.language-switch a:hover {
+  color: var(--green);
+}
+.language-divider {
+  font-size: 11px;
+  color: var(--muted);
+}
+.fallback-page {
+  min-height: 60vh;
+  padding-block: 64px;
+}
+.fallback-page h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  color: var(--green);
+  font-weight: 500;
+}
+.fallback-page p {
+  margin: 24px 0;
+  line-height: 1.7;
+}
